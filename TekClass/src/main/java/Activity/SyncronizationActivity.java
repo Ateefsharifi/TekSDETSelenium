@@ -14,8 +14,8 @@ public class SyncronizationActivity {
         driver.get("https://retail.tekschool-students.com/");
         driver.manage().window().maximize();
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofDays(TimeUnit.SECONDS.toSeconds(10)));
-
+        //driver.manage().timeouts().implicitlyWait(Duration.ofDays(TimeUnit.SECONDS.toSeconds(10)));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TimeUnit.SECONDS.toSeconds(10)));
         driver.findElement(By.id("signinLink")).click();
         driver.findElement(By.id("email")).sendKeys("Example@gmail.com");
         driver.findElement(By.id("password")).sendKeys("Test@12345");
@@ -28,8 +28,7 @@ public class SyncronizationActivity {
         driver.findElement(By.id("personalPhoneInput")).sendKeys("7030000000");
         driver.findElement(By.id("personalUpdateBtn")).click();
 
-
-
+        driver.quit();
 
 
     }
