@@ -13,11 +13,11 @@ public class DropDownSelect {
         WebDriver driver=new ChromeDriver();
         driver.get("https://retail.tekschool-students.com/selenium/dropdown");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 
-        WebElement DropdownCountry=driver.findElement(By.id("countrySelect"));
-        Select DrpCountrySelect=new Select(DropdownCountry);
-        DrpCountrySelect.selectByValue("United States");
+        WebElement DropdownLanguage=driver.findElement(By.id("languageSelect"));
+        Select DrpLanguage=new Select(DropdownLanguage);
+        DrpLanguage.selectByValue("Italian");
 
 
     }
