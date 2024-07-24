@@ -15,11 +15,11 @@ public class AlertActivity {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
-        driver.findElement(By.xpath("//*[@id=\"promptBtn\"]")).click();
+        driver.findElement(By.xpath("//*[@id='promptBtn']")).click();
         Alert alert=driver.switchTo().alert();
         alert.sendKeys("Mohammad");
         alert.accept();
-        String Message=driver.findElement(By.xpath("//*[@id=\"message\"]")).getText();
+        String Message=driver.findElement(By.xpath("//*[@id='message']")).getText();
         System.out.println(Message);
     }
 }
