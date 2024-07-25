@@ -15,11 +15,11 @@ public class TableActivity {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
-        driver.findElement(By.xpath("//*[@id='root']/div/div[1]/div/a[2]")).click();
+        driver.findElement(By.xpath("//a[@href='/login']")).click();
         driver.findElement(By.name("username")).sendKeys("supervisor");
         driver.findElement(By.name("password")).sendKeys("tek_supervisor");
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/form/div/div[3]/button[1]")).click();
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/a[2]")).click();
+        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        driver.findElement(By.xpath("//a[contains(@href,'/plans')]")).click();
 
         List<WebElement> TbodyPrice=driver.findElements(By.xpath("//*/table/tbody/tr/td[3]"));
         for(WebElement EachElement:TbodyPrice){
