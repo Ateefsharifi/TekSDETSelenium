@@ -12,21 +12,21 @@ public class SeleniumUtility {
     WebDriverWait Wait;
 
 
-    SeleniumUtility(WebDriver driver){
-        this.driver=driver;
-        this.Wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+    SeleniumUtility(WebDriver driver) {
+        this.driver = driver;
+        this.Wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
-    public void ElementToBeClick(By ClickableElements){
+    public void ElementToBeClick(By ClickableElements) {
         driver.findElement(ClickableElements).click();
     }
 
-    public void ElementSendKey(By SendKeyElement,String Key){
+    public void ElementSendKey(By SendKeyElement, String Key) {
         driver.findElement(SendKeyElement).sendKeys(Key);
     }
 
-    public String getElementText(By ElementText){
-       return(driver.findElement(ElementText).getText());
+    public String getElementText(By ElementText) {
+        return (driver.findElement(ElementText).getText());
 
     }
 
